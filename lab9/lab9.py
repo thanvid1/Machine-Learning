@@ -17,8 +17,10 @@ y_pred=gnb.predict(X_test)
 accuracy=accuracy_score(y_test,y_pred)
 print(f"Accuracy: {accuracy*100:.2f}%")
 
-confusion=confusion_matrix(y_test,y_pred)
-print("Confusion Matrix:\n",confusion)
+classification=classification_report(y_test,y_pred, zero_division=1)
+print("Classification Report:\n",classification)
+
+
 
 print("Confusion Matrix:\n")
 print(confusion_matrix(y_test,y_pred))
